@@ -1,0 +1,10 @@
+import './total-amount-labels.js';
+import './quantity.js';
+import './address.js';
+import './tabs.js';
+import './custom-amount.js';
+import './coupon.js';
+import './recurring-amount-toggle.js';
+import './payment-methods.js';
+import './price-select.js';
+import './fee-recovery.js';

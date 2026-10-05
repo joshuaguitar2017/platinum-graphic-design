@@ -1,0 +1,47 @@
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">
+/* Add your CSS code here.
+
+For example:
+.example {
+    color: red;
+}
+
+For brushing up on your CSS knowledge, check out http://www.w3schools.com/css/css_syntax.asp
+
+End of comment */ 
+
+.presto-video.hydrated {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.plyr__video-wrapper {
+    width: 200px;
+    height: 200px;
+    aspect-ratio: auto; /* Remove the forced 1:1 ratio */
+}
+.presto-player .play-button:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+.presto-player__wrapper fitvidsignore presto-video-id-1 skin-modern presto-player--playing presto-player--hide-controls {
+    width: 200px;
+    height: 200px;
+}
+
+.presto-player.hydrated::after {
+    content: "Your Watermark Text";
+    position: absolute;
+    bottom: 10px; /* Position at bottom-right corner */
+    right: 10px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    background: rgba(0, 0, 0, 0.5); /* Optional background for readability */
+    padding: 4px 8px;
+    border-radius: 4px;
+    pointer-events: none; /* Prevent interference with video controls */
+}</style>
+<!-- end Simple Custom CSS and JS -->

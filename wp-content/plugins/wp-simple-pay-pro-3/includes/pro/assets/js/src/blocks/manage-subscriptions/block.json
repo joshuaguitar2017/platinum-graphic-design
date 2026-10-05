@@ -1,0 +1,9 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "simpay/manage-subscriptions-block",
+    "title": "WP Simple Pay - Manage Subscriptions",
+    "category": "widgets",
+    "description": "A block to display a form to manage subscriptions.",
+    "textdomain": "simple-pay"
+}

@@ -1,0 +1,66 @@
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">
+#simpay-2824-payment-button{ 
+    background-color: #4da57c;  
+    border: none;
+    color: white;
+ text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 1em;
+    transition: background-color 0.3s ease;
+	 margin: -30px -20px;
+
+}
+#simpay-2824-payment-button:hover {
+    background-color: #45a049 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#simpay-2825-payment-button{ 
+    background-color: #4da57c;  
+    border: none;
+    color: white;
+ text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 1em;
+    transition: background-color 0.3s ease;
+	 padding: -30px -20px;
+}
+
+#form-field-field_b2d7180{
+	
+	 grid-column: span 2; /* Make Field 1 span across both columns */
+  grid-row: span 2; 
+}
+.form-field-field_b2d7180{
+	
+	height: 25.5px;
+}
+
+.simpay-checkout-btn { background-color: #4da57c !important; }
+.simpay-checkout-btn:hover { background-color: #037ad0 !important; }
+
+.wpforms-form input[type=submit],
+.wpforms-form button[type=submit] {
+    border: 1px solid #ddd; /* Dark grey border */
+    color: #ffffff; /* Black text color */
+    font-size: 1em; /* Size of text */
+	width:50%;
+    padding: 20px 15px; /* Distance between text and border */
+}
+@media only screen and (max-width: 767px) {
+  .wpforms-form button[type=submit] {
+    font-size: 12px;
+    width: 100%;
+    margin: 0;
+  }
+}
+</style>
+<!-- end Simple Custom CSS and JS -->
