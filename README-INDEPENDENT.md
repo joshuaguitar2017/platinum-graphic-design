@@ -23,3 +23,10 @@ The first submission to ABC@hotmail.com may require activation/confirmation from
 
 ## When the custom domain is moved to Vercel
 The `_next` redirect fields currently return to the Vercel test domain. After `www.platinumgraphicdesign.com` is live on Vercel, you may optionally change them to the custom domain. The forms will still work without that change.
+
+
+## 2026-10-06 reliability fix
+- Homepage hero image is now served from `/assets/images/home-hero-bg.jpg`.
+- Contact hero image is now served from `/assets/images/contact-hero-bg.jpg`.
+- Contact form and homepage popup enquiry submit directly to FormSubmit for `platinumgraphicdesign@outlook.com`.
+- WordPress backend endpoints are not required for these forms.
