@@ -1,0 +1,11 @@
+Platinum Graphic Design - V3 Fix
+
+Fixed:
+1. Homepage hero was blank because Elementor exported animation left the hero container with class "elementor-invisible". Since the static site no longer relies on Elementor's WordPress runtime to reveal it, it stayed hidden.
+2. Contact hero had the same issue.
+3. Homepage service heading/cards had exported animation visibility classes that could remain hidden.
+4. Hero background images are now forced directly on the hero containers and served from /assets/images/.
+5. Homepage REQUEST QUOTE / CONTACT US use a standalone modal that posts directly to FormSubmit -> platinumgraphicdesign@outlook.com, without WordPress backend.
+6. Contact form continues posting directly to FormSubmit -> platinumgraphicdesign@outlook.com.
+
+Deploy: copy these files over the same paths in the GitHub repository, Commit, Push origin, then wait for Vercel deployment.
