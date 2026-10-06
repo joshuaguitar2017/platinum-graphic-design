@@ -21,8 +21,8 @@ The previous card checkout depended on the WP Simple Pay WordPress plugin. This 
 ## FormSubmit first-time activation
 The first submission to ABC@hotmail.com may require activation/confirmation from FormSubmit. Confirm that email once, then test again.
 
-## When the custom domain is moved to Vercel
-The `_next` redirect fields currently return to the Vercel test domain. After `www.platinumgraphicdesign.com` is live on Vercel, you may optionally change them to the custom domain. The forms will still work without that change.
+## Form success redirects
+All FormSubmit `_next` fields return to the canonical production domain at `https://www.platinumgraphicdesign.com`.
 
 
 ## 2026-10-06 reliability fix
