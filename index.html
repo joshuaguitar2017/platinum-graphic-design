@@ -263,7 +263,21 @@ Click the help icon above to learn more.
 #pgd-enquiry-modal button[type=submit]:hover{background:#2997AA}
 .pgd-enquiry-success{display:none;position:fixed;right:22px;bottom:22px;z-index:1000000;background:#e9f8f9;color:#0f172a;border:1px solid #cae6e8;border-radius:10px;padding:14px 18px;box-shadow:0 8px 28px rgba(0,0,0,.14)}
 @media(max-width:640px){#pgd-enquiry-modal{padding:14px}#pgd-enquiry-modal .pgd-modal-card{padding:28px 20px}#pgd-enquiry-modal .pgd-grid{grid-template-columns:1fr}#pgd-enquiry-modal .pgd-full{grid-column:auto}}
-</style></head>
+</style>
+<style id="pgd-video-lightbox-css">
+.pgd-video-thumb{position:relative;display:block;width:100%;padding:0;border:0;background:#000;cursor:pointer;overflow:hidden;aspect-ratio:1/1}
+.pgd-video-thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease,filter .25s ease}
+.pgd-video-thumb:hover img,.pgd-video-thumb:focus-visible img{transform:scale(1.02);filter:brightness(.88)}
+.pgd-video-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;padding-left:4px;background:rgba(35,151,170,.92);color:#fff;font-size:28px;line-height:1;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+#pgd-video-lightbox{position:fixed;inset:0;z-index:2147483000;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.82);padding:72px 4vw 40px}
+#pgd-video-lightbox.pgd-open{display:flex}
+.pgd-video-lightbox-inner{position:relative;width:min(900px,92vw);max-height:82vh;display:flex;align-items:center;justify-content:center}
+.pgd-video-lightbox-inner video{display:block;width:100%;max-height:82vh;background:#000;box-shadow:0 18px 60px rgba(0,0,0,.5)}
+.pgd-video-close{position:fixed;top:18px;right:22px;z-index:2147483001;width:46px;height:46px;border:0;background:transparent;color:#fff;font-size:42px;font-weight:300;line-height:1;cursor:pointer;text-shadow:0 2px 8px rgba(0,0,0,.55)}
+.pgd-video-close:hover,.pgd-video-close:focus-visible{opacity:.75}
+@media(max-width:767px){#pgd-video-lightbox{padding:64px 12px 24px}.pgd-video-lightbox-inner{width:96vw}.pgd-video-play{width:54px;height:54px;font-size:24px}.pgd-video-close{top:10px;right:10px}}
+</style>
+</head>
 <body class="home wp-singular page-template-default page page-id-2414 wp-custom-logo wp-theme-astra ast-desktop ast-page-builder-template ast-no-sidebar astra-4.8.3 ast-single-post ast-replace-site-logo-transparent ast-inherit-site-logo-transparent ast-theme-transparent-header ast-hfb-header elementor-default elementor-kit-1399 elementor-page elementor-page-2414 astra-addon-4.8.3" itemscope="itemscope" itemtype="https://schema.org/WebPage">
 <a class="skip-link screen-reader-text" href="#content" title="Skip to content">
 		Skip to content</a>
@@ -608,10 +622,10 @@ Click the help icon above to learn more.
 <div class="elementor-element elementor-element-2dffc2c e-con-full e-flex e-con e-child" data-element_type="container" data-id="2dffc2c" data-settings='{"background_background":"classic"}'>
 <div class="elementor-element elementor-element-2fbf692 elementor-widget elementor-widget-video" data-element_type="widget" data-id="2fbf692" data-widget_type="video.default">
 <div class="elementor-widget-container">
-<video class="pgd-artwork-video" controls playsinline preload="metadata" poster="/wp-content/uploads/2024/10/Video-Editing-1.jpg" style="display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#000;">
-<source src="/wp-content/uploads/2024/10/Video-Ads.mp4" type="video/mp4"/>
-Your browser does not support the video tag.
-</video>
+<button class="pgd-video-thumb" id="pgd-video-open" type="button" aria-label="Play video">
+<img src="/wp-content/uploads/2024/10/Video-Editing-1.jpg" alt="Video Editing" loading="lazy"/>
+<span class="pgd-video-play" aria-hidden="true">▶</span>
+</button>
 </div>
 </div>
 </div>
@@ -1635,6 +1649,48 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 /*! This file is auto-generated */
 var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
 //# sourceURL=/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+<div id="pgd-video-lightbox" role="dialog" aria-modal="true" aria-label="Video player" aria-hidden="true">
+  <button class="pgd-video-close" id="pgd-video-close" type="button" aria-label="Close video">×</button>
+  <div class="pgd-video-lightbox-inner">
+    <video id="pgd-video-player" controls playsinline preload="metadata" poster="/wp-content/uploads/2024/10/Video-Editing-1.jpg">
+      <source src="/wp-content/uploads/2024/10/Video-Ads.mp4" type="video/mp4"/>
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+<script id="pgd-video-lightbox-js">
+(function(){
+  var openBtn=document.getElementById('pgd-video-open');
+  var modal=document.getElementById('pgd-video-lightbox');
+  var closeBtn=document.getElementById('pgd-video-close');
+  var video=document.getElementById('pgd-video-player');
+  if(!openBtn||!modal||!closeBtn||!video)return;
+  var previousOverflow='';
+  function openVideo(){
+    previousOverflow=document.body.style.overflow;
+    document.body.style.overflow='hidden';
+    modal.classList.add('pgd-open');
+    modal.setAttribute('aria-hidden','false');
+    video.currentTime=0;
+    var p=video.play();
+    if(p&&typeof p.catch==='function')p.catch(function(){});
+    closeBtn.focus();
+  }
+  function closeVideo(){
+    video.pause();
+    video.currentTime=0;
+    modal.classList.remove('pgd-open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow=previousOverflow;
+    openBtn.focus();
+  }
+  openBtn.addEventListener('click',openVideo);
+  closeBtn.addEventListener('click',closeVideo);
+  modal.addEventListener('click',function(e){if(e.target===modal)closeVideo();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('pgd-open'))closeVideo();});
+})();
 </script>
 <div aria-labelledby="pgd-enquiry-title" aria-modal="true" id="pgd-enquiry-modal" role="dialog">
 <div class="pgd-modal-card">
