@@ -1,13 +1,6 @@
-Disallow: /wp-content/uploads/wpforms/
-
 User-agent: *
-Disallow: /wp-content/uploads/wpo/wpo-plugins-tables-list.json
-
-# START YOAST BLOCK
-# ---------------------------
-User-agent: *
-Disallow:
-
-Sitemap: https://www.platinumgraphicdesign.com/sitemap_index.xml
-# ---------------------------
-# END YOAST BLOCK
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-json/
+Disallow: /wp-login.php
+Sitemap: https://www.platinumgraphicdesign.com/sitemap.xml
