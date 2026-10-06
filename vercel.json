@@ -18,12 +18,22 @@
       "permanent": true
     },
     {
+      "source": "/author/:slug/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/author/:path*",
       "destination": "/",
       "permanent": true
     },
     {
       "source": "/category/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug/",
       "destination": "/",
       "permanent": true
     },
